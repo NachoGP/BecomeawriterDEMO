@@ -1,0 +1,27 @@
+[
+  {
+    "text": "000",
+    "tooltip": "ciencia ficcion",
+    "value": 14
+  },
+  {
+    "text": "001",
+    "tooltip": "Haiku",
+    "value": 28
+  },
+  {
+    "text": "002",
+    "tooltip": "poema",
+    "value": 19
+  },
+  {
+    "text": "003",
+    "tooltip": "distopía",
+    "value": 30
+  },
+  {
+    "text": "004",
+    "tooltip": "epistolar",
+    "value": 28
+  }
+]

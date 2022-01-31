@@ -1,0 +1,20 @@
+<h3 mat-dialog-title class="titleHeader">
+  <span>{{title}}</span>
+  <mat-divider class="headerDivider"></mat-divider>
+</h3>
+<div mat-dialog-content class="dialogContent">
+  <div class="contentDiv">
+    <div><span>{{body}}</span></div>
+    <div *ngIf="relatoName" class="relatoName"><span>{{ relatoName }}</span></div>
+    <div *ngIf="icon">
+      <mat-icon [svgIcon]="icon" class="iconModal"></mat-icon>
+    </div>
+  </div>
+</div>
+  <mat-divider class="actionsDivider"></mat-divider>
+  <div mat-dialog-actions class="wrapper-actions">
+    <div class="text-center buttonContainer">
+      <button mat-button (click)="close()" class="modal-button preferent">{{button1}}</button>
+      <button mat-button (click)="accept()" class="modal-button">{{button2}}</button>
+    </div>
+  </div>

@@ -1,0 +1,91 @@
+
+mat-dialog-title{
+  padding: 24px;
+  .titleHeader {
+    font-weight: 500;
+    font-size: 1.3em !important;
+    height: 80px;
+    margin: 0 !important;
+    display: flex;
+    flex-direction: column;
+  }
+  .headerDivider {
+    border-top-width: 2px;
+    background-color: blueviolet;
+    margin-top: 10px;
+  }
+}
+
+
+.dialogContent {
+  padding: 24px;
+//   height: calc(100% - 80px)
+.contentDiv {
+  height: 65%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  font-weight: 400;
+  .relatoName{
+    font-size: 18px;
+    font-weight: 600;
+    text-transform: initial;
+    padding-top: 10px;
+    span{
+      margin: 1em;
+    }
+  }
+  .iconModal{
+    height: 100px;
+    width: 100px;
+    padding : 20px;
+  }
+ }
+}
+mat-dialog-actions{
+  padding: 1.1em !important;
+}
+
+.wrapper-actions{
+  display: inline-block;
+  padding-bottom: 1.1em !important;
+  justify-content: space-around;
+  width: 100%;
+  .actionsDivider{
+  padding: 6px;
+  }
+}
+  .buttonContainer {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .modal-button {
+      background-color:#e6d2f9;
+    color:#202020;
+    font-size: 1em;
+    border: 1px solid blueviolet;
+    border-radius: 0;
+    width: 100%;
+    display: -webkit-box;
+    display: flex;
+    justify-content: space-around;
+    padding: 0.5em;
+    }
+    .preferent{
+      background-color: #f1eef3;
+    }
+  }
+
+
+// .modal-button {
+//   background-color: blueviolet;
+//   color: #f2f2f2;
+//   border: 1px solid blueviolet;
+//   border-radius: 4px;
+//   width: 130px;
+//   margin: 30px;
+// }
+

@@ -1,0 +1,106 @@
+<div class="container-fluid">
+  <!-- <div class="row" *ngIf="loadingDashboardData">
+    <div class="col">
+      <app-spinner></app-spinner>
+    </div>
+  </div> -->
+  <div class="row pt-4">
+    <div class="col-4">
+      <div class="dashInfoContainer">
+        <div class="row">
+          <div class="col">
+            <div>
+              <span class="titleLabel">Titulo
+              </span>
+            </div>
+            <mat-card>
+              <div class="d-flex">
+                <div class="infoDashboard">
+                  <div class="labelInfo text-center">
+                    <p>VAlidadas</p>
+                    {{(dashboardInfo && dashboardInfo['early'] && dashboardInfo['early']['validated']) ?
+                    dashboardInfo['early']['validated'] : 0}}
+                  </div>
+
+                </div>
+                <mat-divider [vertical]="true"></mat-divider>
+                <div class="infoDashboard">
+                  <div class="labelInfo text-center">
+                    <p>Pendientes</p>
+                    {{(dashboardInfo && dashboardInfo['early'] && dashboardInfo['early']['pending']) ?
+                    dashboardInfo['early']['pending'] : 0}}
+                  </div>
+                </div>
+              </div>
+            </mat-card>
+          </div>
+        </div>
+        <div class="row pt-4">
+          <div class="col">
+            <div class="row">
+              <div class="col pr-0">
+                <span class="titleLabel">Preventivas
+                </span>
+              </div>
+            </div>
+            <mat-card>
+              <div class="d-flex">
+                <div class="infoDashboard">
+                  <div class="labelInfo text-center">
+                    <p>Validadas</p>
+                    {{(dashboardInfo && dashboardInfo['preventive'] && dashboardInfo['preventive']['validated']) ?
+                    dashboardInfo['preventive']['validated'] : 0}}
+                  </div>
+                </div>
+                <mat-divider [vertical]="true"></mat-divider>
+                <div class="infoDashboard">
+                  <div class="labelInfo text-center">
+                    <p>Pendientes</p>
+                    {{(dashboardInfo && dashboardInfo['preventive'] && dashboardInfo['preventive']['pending']) ?
+                    dashboardInfo['preventive']['pending'] : 0}}
+                  </div>
+                </div>
+              </div>
+            </mat-card>
+          </div>
+        </div>
+        <div class="row pt-5">
+          <div class="col">
+            <div class="chartContainer">
+              <div>
+                <span class="titleLabel">Grafica
+                </span>
+              </div>
+
+              <mat-card>
+                <app-spinner *ngIf="loadingDashboardData"></app-spinner>
+                <div echarts [options]="chartOptions" *ngIf="chartOptions" class="chartAlerts"></div>
+                <div class="d-flex justify-content-around mt-3">
+                  <div>
+                    <div class="lineLabel lineEarly"></div>
+                    <span clas>Tempranas</span>
+                  </div>
+                  <div>
+                    <div class="lineLabel linePreventive"></div>
+                    <span>Preventivas</span>
+                  </div>
+                </div>
+              </mat-card>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-8">
+      <div class="tableContainer">
+        <div>
+          <span class="titleLabel">Tabla
+          </span>
+        </div>
+        <div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,29 @@
+
+.modal-button {
+  background-color: var(--main-background-deg);
+  color: #f2f2f2;
+}
+.msgContainer{
+  padding: 25px;
+  .iconModal{
+    height: 100px;
+    width: 100px;
+    padding : 20px;
+    display: flex;
+    margin: 0 auto;
+  }
+}
+.message {
+  text-align: center;
+  font-size: 17px;
+}
+button{
+  display: flex;
+  justify-content: center;
+  margin: 1em;
+}
+.custom-space{
+  display: flex;
+  justify-content: center;
+  margin: 1em;
+}

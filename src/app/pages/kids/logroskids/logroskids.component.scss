@@ -1,0 +1,115 @@
+body {
+  padding-top: 10px;
+  padding-bottom: 40px;
+  background-image: url(../../../../assets/img/background-register-KIDS-blur.png);
+  /* background:  var(--main-background-deg); */
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-position: center center;
+  background-size: cover;
+  /* background: var(--main-background-deg); */
+  height: 100vh;
+}
+
+.masthead {
+  margin-top: 4.5em;
+}
+.form-signin .form-signin-heading,
+.form-signin .checkbox {
+  margin-bottom: 10px;
+  color: #f2f2f2;
+  text-align: center;
+  font-size: 22px;
+}
+span.star-to-20 {
+  font-size: 60px;
+  color: gold;
+  font-weight: bold;
+}
+
+.align {
+  text-align: center;
+  color: #f2f2f2;
+  font-size: 19px;
+}
+.ncategories {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  margin: 0 auto;
+}
+
+.form-signin {
+  padding: 15px;
+  margin: 0 auto;
+}
+.btn-block {
+  color: #484848;
+  background-color: #f2f2f2;
+}
+
+.btn-block:hover {
+  color: #484848;
+  background-color: #fff;
+  border-color: #204d74;
+}
+span {
+  font-size: 12px;
+  color: #f2f2f2;
+}
+a {
+  /* font-size:12px; */
+  color: white;
+}
+button,
+a,
+input {
+  font-size: 14px;
+}
+input,
+a {
+  margin-top: 10px;
+}
+.square-form {
+  width: 50%;
+  border: 0.5px solid rgb(146, 136, 236);
+  padding: 2%;
+  border-radius: 4px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  background: var(--main-background-deg);
+}
+section p.star {
+  /* width: 150px; */
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  font-size: 116px;
+  padding-bottom: 0px;
+  margin-top: -110px;
+}
+
+.star-number {
+  font-size: 35px;
+}
+.ng-valid {
+  border-color: green;
+  color: #484848;
+}
+
+h2.total-stories {
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  font-size: 40px !important;
+  color: gold !important;
+}
+
+@media (max-width: 768px) {
+  body {
+    height: 100vh;
+  }
+  .square-form {
+    width: 100%;
+  }
+}

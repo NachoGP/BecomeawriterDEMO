@@ -1,0 +1,82 @@
+<body id="page-top">
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark top-head" id="mainNav">
+    <div class="container">
+      <div class="navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav d-flex">
+          <li>
+            <a class="navbar-brand " routerLink="/login"
+              ><img src="../../assets/img/logo-be.png" alt=""
+            /></a>
+          </li>
+          <li class="nav-item men">
+            <a class="nav-link" href="#howitworks">¿Cómo?</a>
+          </li>
+          <li class="nav-item men">
+            <a class="nav-link " href="#beawriter">¿Qué es?</a>
+          </li>
+
+          <li class="nav-item men">
+            <a class="nav-link" href="#rules">Aprende</a>
+          </li>
+          <!-- <li class="nav-item men">
+            <a class="nav-link " href="#prizing">Precios</a>
+          </li> -->
+          <li class="nav-item ">
+            <a class="nav-link log" routerLink="/login">Iniciar sesión</a>
+          </li>
+          <br />
+          <li class="nav-item kids">
+            <a
+              class="nav-link log  col-10 block-center"
+              routerLink="/loginkids"
+              >Iniciar sesión KIDS</a
+            >
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Header -->
+  <header class="masthead">
+    <div class="tap-effect">
+      <div class="col-lg-6 col-md-12 col-sm-12 message-1"></div>
+
+      <div class="col-lg-6 col-md-12 col-sm-12">
+        <div class="intro-text">
+          <div class="intro-heading writeit"><h1 class="type"></h1></div>
+          <div class="hero-button">
+            <a
+              class="btn btn-primary btn-xl js-scroll-trigger fadeIn animated superslow-1"
+              routerLink='/register'
+              >¿Cuánto tiempo tienes para escribir?</a
+            >
+          </div>
+        </div>
+        <div class="col-lg-12 col-md-12 col-sm-12 twoptions">
+          <div class="col-md-6 options fadeIn animated slow">
+            <button type="button" class="btn" (click)='goToLogin()'
+              ><img src="../../assets/img/adultsok.png" alt=""
+            /></button>
+          </div>
+          <div class="col-md-6 options fadeIn animated slow">
+            <button type="button" class="btn" (click)='goToLoginChooseAge()'
+              ><img src="../../assets/img/kidsok.png" alt=""
+            /></button>
+          </div>
+        </div>
+      </div>
+      <!-- Fin de tap-effect -->
+    </div>
+    <br />
+    <span class="arrow text-center "
+      ><a href="#beawriter"
+        ><img
+          class="fadeIn animated superslow-2"
+          src="../../assets/img/flecha-hacia-abajo.png"
+          alt=""/></a
+    ></span>
+  </header>
+</body>
+

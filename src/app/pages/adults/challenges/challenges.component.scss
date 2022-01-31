@@ -1,0 +1,205 @@
+mat-drawer {
+  width: 160px;
+  // background: blueviolet;
+  background: linear-gradient(
+    to right,
+    rgba(49, 35, 174, 1) 0%,
+    rgba(201, 109, 215, 1) 100%
+  ) !important;
+}
+.mat-drawer-side {
+  border: none;
+}
+app-winners {
+  flex: 1;
+  margin-top: 2em;
+}
+.example-container {
+  border: 1px solid rgba(0, 0, 0, 0.5);
+}
+.icon {
+  width: 24px;
+  height: 24px;
+}
+
+.example-sidenav {
+  padding: 20px;
+  position: fixed;
+}
+.calendar {
+  width: 20px;
+}
+
+.log-menu {
+  position: absolute;
+  bottom: 20px;
+  left: 50px;
+}
+
+.menu-btn {
+  height: 56px;
+  width: 100%;
+}
+
+p {
+  font-size: 16px;
+  line-height: 1.7em;
+}
+
+body {
+  font-family: "Nunito", serif;
+  color: #868e96;
+}
+
+@media (max-width: 992px) {
+  .fixed-top {
+    display: none;
+  }
+  body {
+    padding-top: 0;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: "Nunito", serif;
+  text-transform: uppercase;
+  color: #343a40;
+}
+
+h1 {
+  font-size: 2rem;
+  line-height: 4.5rem;
+  text-transform: capitalize;
+}
+
+h4 {
+  text-transform: unset;
+}
+
+h2 {
+  font-size: 3.5rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+  text-transform: unset;
+  margin: 0 auto;
+}
+.back {
+  color: white;
+}
+
+a.back {
+  color: white;
+}
+
+.back:hover {
+  color: #484848;
+  background: #f2f2f2;
+}
+
+.ncategories {
+  display: flex;
+  text-align: center;
+  flex-wrap: wrap;
+  padding: 2% 0;
+}
+.nrel {
+  color: #a53392;
+}
+
+h3.cat {
+  padding: 0;
+  margin: 0 auto;
+}
+
+.challenge-card {
+  min-width: 126px;
+  border-top: 6px solid #8a2be2;
+  display: inline-table;
+  .challenge-header-image {
+    width: 24px;
+    height: 24px;
+    background-image: url("./../../../../assets/img/icons/edit.svg");
+    background-size: cover;
+  }
+  mat-card-subtitle{
+    color: #8a2be2;
+  }
+
+  mat-card-content {
+    height: auto;
+    .challenge-img {
+      padding: 1em 3em;
+      display: flex;
+      margin: 0 auto;
+      width: 80%;
+    }
+  }
+  mat-card-actions {
+    display: grid;
+    mat-form-field{
+      width: 80%;
+      margin: 0 auto;
+      mat-label:first-child{
+        color: #8a2be2;
+      }
+    }
+  }
+}
+
+.mat-card-title {
+  font-size: 15px;
+}
+.challenge-header {
+  border-bottom: 1px solid blueviolet;
+}
+
+// CARD WRAPPER
+.cards-winner-wrapper {
+  margin-top: 1em;
+  flex: 1;
+  .winner-card {
+  }
+}
+
+section.resume-section {
+  padding-top: 0em !important;
+}
+
+section.resume-section .resume-item .resume-date {
+  min-width: none;
+}
+
+.logo {
+  cursor: pointer;
+}
+
+.go-back {
+  position: relative;
+  bottom: 20px;
+  left: 20px;
+  width: 120px;
+}
+
+@media (min-width: 1524px) {
+  .challenge-card {
+    mat-card-content {
+      .challenge-img {
+        padding: 1em 7em;
+      }
+    }
+  }
+}
+
+@media (max-width: 1381px) {
+  mat-card-actions {
+    button:first-child {
+      font-size: 13px;
+    }
+  }
+}

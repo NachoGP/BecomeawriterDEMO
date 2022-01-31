@@ -1,0 +1,14 @@
+<div mat-dialog-content>
+  <div class="msgContainer">
+    <p>{{title}}</p>
+    <mat-divider class="headerDivider"></mat-divider>
+    <div *ngIf="icon">
+      <mat-icon [svgIcon]="icon" class="iconModal"></mat-icon>
+    </div>
+    <div><span>{{body}}</span></div>
+    <p class="message">{{message}}</p>
+  </div>
+</div>
+<div mat-dialog-actions class="text-center custom-space">
+  <button mat-button (click)="close()" class="modal-button">EMPEZAR</button>
+</div>

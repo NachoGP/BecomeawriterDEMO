@@ -1,0 +1,24 @@
+<div class="modal animated fadeIn" id="modalInfo" aria-labelledby="modalInfo" [style.display]="display">
+	<div class="modal-dialog" role="document">
+			<div class="modal-content">
+					<div class="modal-header">
+							<h4 class="modal-title" id="modalInfo"> {{ parameters.getValue('title') }} </h4>
+							<button type="button" class="close" data-dismiss="modal" aria-label="Close" (click)="cancel()">
+									<span aria-hidden="true">&times;</span>
+							</button>
+					</div>
+					<div class="modal-body mx-0">
+							<img *ngIf="hasTick()" class="tick-image" src="../../../assets/img/tick-inside-a-circle.svg" alt="">
+							<p class="body-modal-text mt-3" *ngIf="hasBody()"> {{ parameters.getValue('body') }}</p>
+					 <p class="status-text" *ngIf="hasText1()"> {{parameters.getValue('text1')}} </p>
+					 <p class="status-text" *ngIf="hasText2()"> {{parameters.getValue('text2')}} </p>
+					</div>
+					<div class="modal-footer" *ngIf="hasButton()">
+							<button type="button" class="btn btn-custom" data-dismiss="modal" (click)="close()">
+									<i class="fa fa-check" aria-hidden="true"></i>
+									<span> &nbsp; {{parameters.getValue('button')}}</span>
+							</button>
+					</div>
+			</div>
+	</div>
+</div>

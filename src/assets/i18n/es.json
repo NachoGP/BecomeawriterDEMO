@@ -1,0 +1,24 @@
+{
+	"APP": {
+		"TITLE": "Become a Writer"
+	},
+	"BUTTON": {
+		"EXIT": "Salir"
+	},
+	"LOGIN": {
+		"BUTTON": "Acceder",
+		"ACCESS": "Por favor, accede:",
+		"NAME_PLACEHOLDER":"Nombre del alumno",
+		"PASSWORD_PLACEHOLDER":"Nombre del alumno"
+	},
+	"NEWPROFILE": {
+		"WELCOME": "Bienvenid@",
+		"MORNING": "Buenos días",
+		"AFTERNOON": "Buenas tardes",
+		"EVENING": "Buenas noches",
+		"MYMENU": "Mi Menú",
+		"NEW_STORY": "Nuevo Cuento",
+		"ACHIEVEMENTS": "Logros",
+		"PUBLISH":"Publicados"
+  }
+}

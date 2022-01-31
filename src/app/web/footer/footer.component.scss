@@ -1,0 +1,33 @@
+footer {
+  padding: 10%;
+  margin: 1em;
+}
+.copyright {
+  line-height: 45px;
+  font-size: 12px;
+}
+ul.list-inline.quicklinks a {
+  font-size: 12px;
+}
+ul.list-inline.quicklinks.quicklinks,
+span {
+  font-size: 10px;
+  color: #bd10e0;
+  display: flex;
+  justify-content: center;
+  line-height: 45px;
+}
+
+.fa {
+  margin: 1em;
+}
+.quicklinks {
+  font-size: 12px;
+}
+i {
+  padding: 3%;
+  color: rgb(146, 136, 236);
+}
+i:hover {
+  color: rgba(211, 53, 243, 0.808);
+}

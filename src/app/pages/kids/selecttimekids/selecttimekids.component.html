@@ -1,0 +1,55 @@
+<body id="page-top">
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark top-head" id="mainNav">
+    <div class="container">
+      <div class="navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link  text-uppercase" [routerLink]="['']">SALIR</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Header -->
+  <header class="masthead">
+    <div class="container">
+      <div class="intro-text">
+        <div class="submit">
+          <div class="intro-heading writing animated fadeIn">
+            ¿Cuánto tiempo tienes para escribir tu cuento? <br />Selecciona una
+            opción, por favor...
+          </div>
+          <div class="timer-container col-12 animated fadeIn">
+            <div class="button-sel col-4">
+              <button (click)="pressButton()" [ngClass]="{ active: isActive }" class="btn btn-lg btn-block time-but"
+                type="submit">
+                5 min
+              </button>
+            </div>
+            <div class="button-sel col-4">
+              <button (click)="pressButton2()" [ngClass]="{ active2: isActive2 }" class="btn btn-lg btn-block time-but"
+                type="submit">
+                15 min
+              </button>
+            </div>
+            <div class="button-sel col-4">
+              <button (click)="pressButton3()" [ngClass]="{ active3: isActive3 }" class="btn btn-lg btn-block time-but"
+                type="submit">
+                Ilimitado
+              </button>
+            </div>
+          </div>
+          <div class="timer-container col-12 animated fadeIn slow">
+            <div class="button-sel col-12">
+              <button (click)="guardarTiempo()" class="btn btn-block time-start" type="submit">
+                CONTINUAR
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+</body>

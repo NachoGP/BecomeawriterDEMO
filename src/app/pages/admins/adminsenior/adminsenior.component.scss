@@ -1,0 +1,11 @@
+.mainWrapper{
+	padding: 2em;
+}
+
+.cardsWrapper, .chartsWrapper {
+  margin-bottom: 30px;
+
+  mat-card.chartCard {
+    padding: 20px 10px 0 10px!important;
+  }
+}

@@ -1,0 +1,87 @@
+<body id="page-top main-container">
+  <div class=" p-3 p-lg-5 d-flex flex-column "></div>
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-custom fixed-top animated fadeIn" id="sideNav">
+    <a class="navbar-brand js-scroll-trigger">
+      <span class="d-none d-lg-block">
+        <img class="img-fluid mx-auto mb-2" src="../../assets/img/nachokids-logo_1.png" alt="" />
+      </span>
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav">
+        <a class="btn btn-outline-primary back" [routerLink]="['/selecttimekids']">Escribir Nuevo</a>
+        <br />
+        <a class="btn btn-outline-primary back" (click)="volverMenu()">Volver a Menú</a>
+        <br />
+        <span class="interliner">🔸</span>
+        <br />
+        <a class="btn btn-outline-primary back salir" (click)="cerrarSesion()">CERRAR SESIÓN</a>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="container-fluid p-0">
+    <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="experience">
+      <div class="my-auto">
+        <h3>Categoria: {{ arrayRelatoUno.categoria }} minutos</h3>
+        <br />
+        <div class="resume-date text-md-left">
+          <button class="verpropuesta btn btn-outline-primary back " (click)="Ocultarpropuestahist()">
+            Consultar propuesta del relato
+          </button>
+          <div class="row col-12">
+            <div *ngIf="mostrarprop1" class="alert animated fadeIn slow propuesta-marco col-6" role="alert">
+              <h4>Mi cuento lo escribi con:</h4>
+              <p ng-class="trasparent">ESCRIBÍ SOBRE: {{ arreglo.genero }}</p>
+              <p>PERSONAJE: {{ arreglo.personaje }}</p>
+              <p>SUSTANTIVO: {{ arreglo.sustantivo }}</p>
+            </div>
+            <div *ngIf="mostrarprop2" class="alert animated fadeIn slow propuesta-marco col-6" role="alert">
+              <p>{{ arreglo.completa }}</p>
+              <img *ngIf="mostrarprop2" class="image-propuesta" [src]="arreglo.imagen" />
+            </div>
+          </div>
+          <hr />
+        </div>
+        <section>
+          <div class="resume-item d-flex flex-column flex-md-row mb-5 col-12">
+            <div class="resume-content col-5">
+              <h3 class="mb-0">TITULO:</h3>
+              <div class="subheading mb-1">
+                <div class="form-group shadow-textarea">
+                  <article>{{ arrayRelatoUno.titulo }}</article>
+                </div>
+              </div>
+            </div>
+            <div class="manage-stories col-7">
+              <h3 class="valoration">
+                Este relato equivale a: {{ arrayRelatoUno.puntaje }}
+              </h3>
+              <br />
+              <h3 class="stars">
+                👉 ¡Por cada cuento conseguirás estrellas!
+              </h3>
+              <h3 class="stars">
+                👉 Con 20 estrellas acumuladas: UN FANTÁSTICO PREMIO! 🎁
+              </h3>
+              <br />
+            </div>
+          </div>
+          <div class="form-group purple-border">
+            <div class="form-group shadow-textarea">
+              <section class="form-control z-depth-1 custom-textarea" placeholder="Érase una vez..."
+                id="exampleFormControlTextarea4" rows="10">
+                <br />
+                <p class="paragraph-story">{{ arrayRelatoUno.relato }}</p>
+              </section>
+            </div>
+          </div>
+        </section>
+      </div>
+    </section>
+  </div>
+</body>

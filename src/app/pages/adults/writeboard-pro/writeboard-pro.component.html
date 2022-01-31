@@ -1,0 +1,187 @@
+<body id="page-top">
+  <mat-drawer-container class="example-container" autosize>
+    <mat-drawer #drawer class="example-sidenav" mode="side">
+      <div class="menu-wrapper">
+
+        <span class="d-none d-lg-block">
+          <img class="logo-img img-fluid mx-auto mb-2" src="../../assets/img/logo-be.png" alt="" />
+        </span>
+        <div class="d-flex justify-content-center">
+          <button type="button" mat-button (click)="drawer.toggle()" class="menu-btn">
+            <mat-icon svgIcon="menu_close" matTooltip="Cerrar Menú" [matTooltipShowDelay]="500"
+              matTooltipPosition="right">
+            </mat-icon>
+          </button>
+        </div>
+        <div id="navbarSupportedContent">
+          <ul class="navbar-nav">
+            <h3 class="theme-proposal">Propuesta</h3>
+            <h4>GÉNERO:</h4>
+            <p class="theme-selector">{{ propuestaPro.body['genero']}}</p>
+            <span class="interliner">-</span>
+            <h4>PERSONAJE:</h4>
+            <p class="theme-selector">{{ propuestaPro['body']['personaje'] }}</p>
+            <span class="interliner">-</span>
+            <h4>SUSTANTIVO:</h4>
+            <p class="theme-selector">{{ propuestaPro['body']['sustantivo'] }}</p>
+            <span class="interliner">-</span>
+            <h4>LUGAR:</h4>
+            <p class="theme-selector">{{ propuestaPro['body']['localizacion'] }}</p>
+            <span class="interliner">-</span>
+            <h4>TEMA:</h4>
+            <p class="theme-selector">{{ propuestaPro['body']['tema'] }}</p>
+          </ul>
+        </div>
+        <div class="d-flex justify-content-center">
+          <button type="button" mat-button (click)="exitModal()" class="menu-btn">
+            <mat-icon svgIcon="logout" matTooltip="Salir" [matTooltipShowDelay]="500" matTooltipPosition="below">
+            </mat-icon>
+          </button>
+        </div>
+      </div>
+    </mat-drawer>
+
+    <div class="container-fluid p-0">
+      <div class="example-sidenav-content">
+        <button type="button" mat-button (click)="drawer.toggle()">
+          <mat-icon svgIcon="menu_open" matTooltip="Mostrar propuesta" [matTooltipShowDelay]="100"
+            matTooltipPosition="right">
+          </mat-icon>
+        </button>
+      </div>
+      <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="experience">
+        <div class="my-auto">
+          <div class="resume-item d-flex flex-column flex-md-row mb-5">
+            <section>
+              <form [formGroup]="formCreateStory">
+                <div class="resume-item d-flex flex-column flex-md-row">
+                  <div class="resume-content mr-auto animated fadeIn slow ">
+                    <div class="d-flex">
+                      <div class="col-6">
+                        <h1>Escritor: {{ getUser }}</h1>
+                      </div>
+                      <div class="col-6">
+                        <mat-accordion>
+                          <mat-expansion-panel>
+                            <mat-expansion-panel-header>
+                              <mat-panel-title>
+                                Instrucciones de Inicio
+                              </mat-panel-title>
+                              <mat-panel-description>
+                                ¿Por dónde empiezo?
+                              </mat-panel-description>
+                            </mat-expansion-panel-header>
+                            <p>
+                              👉 No te preocupes por tu nivel. BecomeaWriter está diseñado
+                              para todos los niveles, desde Principiante a Miguel de
+                              Cervantes.
+                            </p>
+                            <br />
+
+                            <p>
+                              👉 Es totalmente gratuito. Entrena y desarrolla tu creatividad
+                              para escribir historias de ficción.
+                              <span class="nrel">Tus límites serán el tiempo y tu propia imaginación.</span>
+                            </p>
+                            <br />
+                            <p>
+                              👉 <span class="nrel">RECUERDA: </span> Puedes utilizar toda
+                              la información de la propuesta o sólo aquellas que se
+                              ajusten a la historia que desees contar.
+                            </p>
+                            <br />
+                            <p>¡Let´s Write!</p>
+                          </mat-expansion-panel>
+                          <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+                            <mat-expansion-panel-header>
+                              <mat-panel-title>
+                                Correción & Desafío
+                              </mat-panel-title>
+                              <mat-panel-description>
+                                <p>¿Qué necesito saber?</p>
+                              </mat-panel-description>
+                            </mat-expansion-panel-header>
+                            <p>
+                              👉 <span class="nrel">RELATOS: </span>Una vez guardado tu
+                              relato de la modalidad Desafío PRO, quedará pendiente de valoración por parte de nuestros
+                              expertos.<br />
+                            </p>
+                            <br/>
+                            <p>
+                              👉 <span class="nrel">DESAFÍO LITERARIO: </span>La modalidad de 
+                              <span class="nrel">'Desafío Pro'</span>
+                              <span> implica que tu relato competirá con el resto de participantes de esta modalidad. Será de carácter público para otros participantes. Si resultas ganador del desafío recibirás un regalo. ¡Te informaremos por email si eres el elegido!
+                              </span>
+                            </p>
+                            <p>¡Mucha Suerte!</p>
+                            <br />
+                          </mat-expansion-panel>
+                        </mat-accordion>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="d-flex">
+                  <div class="col-6">
+                    <h3 class="md-5 mr-2 ml-0">Título:</h3>
+                    <div class="form-group shadow-textarea">
+                      <input [(ngModel)]="relato.titulo" formControlName="titulo"
+                        [ngClass]="{'is-invalid': formCreateStory.get('titulo').touched && formCreateStory.get('titulo').invalid }"
+                        autocomplete="off" class="form-control z-depth-1 input-title" id="exampleFormControlTextarea4"
+                        rows="1" />
+                      <div class="invalid-feedback">
+                        <div>El campo es obligatorio.</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-6 d-flex justify-content-center mt-4">
+                    <div class="col-6">
+                      <div class="iconContainer">
+                        <button type="button" mat-button (click)="saveStory()"
+                          [disabled]="formCreateStory.invalid">
+                          <mat-icon svgIcon="save" matTooltip="Guardar relato" [matTooltipShowDelay]="400"
+                            [matTooltipClass]="{ 'tool-tip-custom': true }" matTooltipPosition="right"
+                            [ngClass]="formCreateStory.invalid ? 'disabled-icon' : 'enabled' "></mat-icon>
+                        </button>
+                      </div>
+
+                    </div>
+                    <div class="col-6 pr-0">
+                      <mat-card class="time-box">
+                        <div class="col-3">
+                          <img id="clock" src="../../assets/img/nachosand-clock.png" />
+                        </div>
+                        <div class="col-9 pr-0">
+                          <h3 class="crono" *ngIf="ilimitado">Sin Límite</h3>
+                        </div>
+                      </mat-card>
+                    </div>
+
+                  </div>
+                </div>
+                <div class="col-md-12">
+                  <div class="table-responsive">
+                    <div class="form-group purple-border">
+                      <label for="exampleFormControlTextarea4">Cuando quieras:</label>
+                      <div class="form-group shadow-textarea">
+                        <textarea formControlName="story" [(ngModel)]="relato.texto"
+                          class="form-control z-depth-1 custom-textarea" placeholder="Íncipit..."
+                          id="exampleFormControlTextarea4" rows="10"
+                          [ngClass]="{'is-invalid': formCreateStory.get('story').touched && formCreateStory.get('story').invalid }"
+                          autocomplete="off"></textarea>
+                        <div class="invalid-feedback">
+                          <div>El relato es un campo obligatorio.</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </form>
+
+            </section>
+          </div>
+        </div>
+      </section>
+    </div>
+  </mat-drawer-container>
+</body>

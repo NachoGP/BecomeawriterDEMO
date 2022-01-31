@@ -1,0 +1,62 @@
+
+@import './../../../../assets/css/palettes.scss';
+mat-card{
+  border-radius: 0;
+}
+
+.dashInfoContainer {
+  width: 100%;
+  padding: 0 0 0 30px;
+
+  .infoDashboard {
+    display: flex;
+    width: 49%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+
+    .labelInfo {
+      color: $baseDataDashboardBox;
+      width: 100%;
+      font-size: 32px;
+      font-weight: 700;
+
+      p {
+        font-size: 12px;
+        font-weight: 700;
+        color: $becomeMainColor;
+      }
+    }
+  }
+
+  .chartAlerts {
+    height: 280px;
+    margin-top: 1em;
+  }
+}
+
+.tableContainer {
+  padding: 0 30px 0 15px
+}
+
+.chartContainer {
+  .lineLabel {
+    margin: 0 auto;
+    height: 25px;
+    width: 50px;
+    border-radius: 16px;
+  }
+
+  .lineEarly {
+    background-color: $becomeSecondaryColor;
+
+  }
+
+  .linePreventive {
+    background-color: $becomeMainColor;
+  }
+
+  span {
+    font-size: 13px;
+  }
+}

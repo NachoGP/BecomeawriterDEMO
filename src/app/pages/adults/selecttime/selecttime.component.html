@@ -1,0 +1,80 @@
+<div class="firefly"></div>
+<div class="firefly"></div>
+<div class="firefly"></div>
+<div class="firefly"></div>
+<div class="firefly"></div>
+<div class="firefly"></div>
+<div class="firefly"></div>
+<div class="firefly"></div>
+<div class="firefly"></div>
+<div class="firefly"></div>
+<div class="firefly"></div>
+<div class="firefly"></div>
+<div class="firefly"></div>
+<div class="firefly"></div>
+<div class="firefly"></div>
+<body id="page-top">
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark top-head" id="mainNav">
+    <div class="container">
+      <div class="navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <button type="button" class="logout" mat-button (click)="exitModal()" [routerLink]="['/main']">
+              <mat-icon svgIcon="logout" class="iconModal"></mat-icon>
+            </button>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Header -->
+  <header class="masthead">
+    <div class="container">
+      <div class="intro-text">
+        <div class="submit">
+          <div class="intro-heading writing animated fadeIn">
+            ¿Cuánto tiempo tienes para escribir? <br />Selecciona una
+            opción, por favor...
+          </div>
+          <div class="timer-container col-12 animated fadeIn">
+            <div class="col-4">
+              <button (click)="pressButton()" [ngClass]="{ active: isActive }" class="btn btn-lg btn-block time-but"
+                type="submit">
+                5 min
+              </button>
+            </div>
+            <div class="col-4">
+              <button (click)="pressButton2()" [ngClass]="{ active2: isActive2 }" class="btn btn-lg btn-block time-but"
+                type="submit">
+                15 min
+              </button>
+            </div>
+            <div class="col-4">
+              <button (click)="pressButton3()" [ngClass]="{ active3: isActive3 }" class="btn btn-lg btn-block time-but"
+                type="submit">
+                Sin límite
+              </button>
+            </div>
+          </div>
+          <div class="timer-container col-12 animated fadeIn slow">
+            <div class="d-flex align-items-center w-100">
+              <div class="col-2 select-btn-wrapper">
+                <button class="navigate mat-button" type="button" mat-button (click)="prevPage()">
+                  <mat-icon svgIcon="navigate_before" class="iconModal-nav"></mat-icon>
+                </button>
+              </div>
+              <div class="button-sel col-8 animated fadeIn slow">
+                <button (click)="guardarTiempo()" class="btn btn-block time-start" type="submit">
+                  Continuar
+                </button>
+              </div>
+              <div class="col-2"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+</body>

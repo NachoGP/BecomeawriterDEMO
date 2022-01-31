@@ -1,0 +1,115 @@
+body {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  background-image: url(../../../../assets/img/background-register-KIDS-blur.png);
+  /* background:  var(--main-background-deg); */
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-position: center center;
+  background-size: cover;
+  height: 100vh;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+  border: 1px solid#484848;
+  border-radius: 3px;
+  color: #f2f2f2;
+  padding-bottom: 0;
+  background: rgb(163, 11, 168);
+}
+.navbar-nav a:hover,
+.nav-link a:hover {
+  background-color: #f2f2f2;
+  color: #484848;
+}
+
+.active,
+.active2,
+.active3 {
+  /* border: 1px solid #fa91f1; */
+  outline: 4px solid #fa91f1;
+  border-radius: 4px;
+  background-color: rgb(163, 11, 168);
+}
+
+.btn-block:hover {
+  color: #f2f2f2;
+  background-color: rgb(163, 11, 168);
+  /* border-color: #204d74; */
+}
+span {
+  font-size: 12px;
+  color: #f2f2f2;
+}
+a {
+  font-size: 12px;
+  color: white;
+}
+button {
+  font-size: 22px;
+  height: 100px;
+  color: #f2f2f2;
+  border-radius: 4px;
+  background-color: rgba(163, 11, 168, 0.75);
+  border: 1px solid #fa91f1;
+}
+
+input,
+button,
+select {
+  margin-top: 10px;
+}
+
+.submit img {
+  width: 150px;
+  display: flex;
+  margin: 0 auto;
+}
+::placeholder {
+  color: rgb(163, 11, 168);
+}
+.form-check label {
+  font-size: 9px;
+  color: #f8f8f8;
+}
+input .form-control {
+  font-size: 9px;
+}
+
+.timer-container {
+  display: flex;
+}
+.time-but {
+  width: 100%;
+  margin: 1em 3%;
+  padding: 1em 0;
+}
+.col-12 {
+  padding-right: 0;
+}
+.time-start {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 1em 0;
+  width: 30%;
+  margin: 0 auto;
+  margin-top: 1.5%;
+}
+header.masthead .intro-text .intro-heading {
+  font-size: 22px;
+  font-weight: 300;
+  color: #484848;
+  line-height: 50px;
+  margin-bottom: 25px;
+}
+.writing {
+  color: white;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  body {
+    height: 100vh;
+  }
+}
